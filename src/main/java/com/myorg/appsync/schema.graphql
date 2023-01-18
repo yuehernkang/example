@@ -1,0 +1,43 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+    
+}
+
+type Mutation {
+
+}
+
+type Company {
+    id: String!
+    company_name: String!
+    industry: String!
+    email: String!
+    contact: String!
+    description: String!
+    logo_path: String!
+    social_cause: [SocialCauses]
+    csr_preference: CSRPreference
+    csr_type: String!
+    form_past_csr: String!
+    form_previous_soo_engaged: String!
+}
+
+enum SocialCauses {
+    ARTSHERITAGE
+    ANIMALS
+    DISABILITIES
+    ENVIRONMENT
+    VULNERABLEELDERLY
+    VULNERABLECHILDREN
+    MENTALWELLNESS
+}
+
+enum CSRPreference {
+    INPERSONPREF
+    VIRTUALPREF
+    NOPREF
+}
